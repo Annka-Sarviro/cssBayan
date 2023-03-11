@@ -66,6 +66,63 @@ img {
   }
 }
 
+.title {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
 .thumb {
   display: flex;
+  justify-content: space-between;
+}
+
+.item_img {
+  margin: 10px 0;
+  display: none;
+}
+
+.item:hover .item_img {
+  display: block;
+  /* transition: 2s all linear; */
+}
+
+.item {
+  display: block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  margin-top: 15px;
+}
+.item:hover {
+  cursor: pointer;
+}
+
+.item:hover .item_title {
+  color: blue;
+}
+
+.item:hover .item_button {
+  background-image: url('https://img.icons8.com/android/24/null/checked.png');
+}
+
+input:checked + label .item_img {
+  display: block;
+}
+
+input[type='radio'] {
+  visibility: hidden;
+}
+
+.item_button {
+  display: none;
+  width: 32px;
+  height: 32px;
+  color: transparent;
+  background-size: cover;
+  background-image: url('https://img.icons8.com/windows/32/null/macos-close.png');
+}
+
+.list:hover .item_button {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
 }
