@@ -1,0 +1,172 @@
+body {
+  background-color: #f2f2f2;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 319px) {
+  .container {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  .item_title {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    width: 80vw;
+  }
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .item_title {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .container {
+    width: 60vw;
+  }
+
+  .title {
+    font-size: 2, 5rem;
+  }
+
+  .item_title {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    width: 55vw;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .item_title {
+    font-size: 1.5 em;
+  }
+}
+
+.title {
+  border-bottom: 0.08rem solid black;
+  padding-bottom: 1.05rem;
+}
+
+.thumb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item_img {
+  margin: 10px auto;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+.item:hover .item_img {
+  width: 70%;
+  height: 70%;
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+
+.item {
+  display: block;
+  margin-bottom: 1.05rem;
+  border-bottom: 0.08rem solid black;
+}
+.item:hover {
+  cursor: pointer;
+}
+
+.item:hover .item:hover .item_title {
+  color: blue;
+}
+
+.item:hover .item:hover .item_button {
+  background-image: url('https://img.icons8.com/android/24/null/checked.png');
+}
+
+input:checked + label .item_img {
+  width: 70%;
+  height: 70%;
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+
+input[type='radio'] {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.item_button {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  color: transparent;
+  background-size: cover;
+  background-image: url('https://img.icons8.com/windows/32/null/macos-close.png');
+}
+
+.list:hover .item_button {
+  width: 1.5em;
+  height: 1.5em;
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
